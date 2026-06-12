@@ -58,6 +58,11 @@ export type MemorialContent = {
     quote: string;
     signature: string;
   };
+  playlist: {
+    title: string;
+    caption: string;
+    embedUrl: string;
+  };
 };
 
 export const memorial: MemorialContent = {
@@ -332,7 +337,7 @@ export const memorial: MemorialContent = {
       id: "memes",
       number: "VIII",
       title: "Us",
-      subtitle: "A energia da gente em meme e gatinho",
+      subtitle: "A energia da gente em meme e gatinho hehe",
       items: [
         {
           src: "/media/memes/meme-01.jpeg",
@@ -474,6 +479,12 @@ export const memorial: MemorialContent = {
       "Você não é só minha namorada. Você é o meu lugar favorito no mundo, Maria.",
     signature:
       "Com todo meu amor, pro Dia dos Namorados e pra todos os dias que vierem.",
+  },
+  playlist: {
+    title: "Nossa trilha",
+    caption: "Pra ouvir pensando em nós.",
+    embedUrl:
+      "https://open.spotify.com/embed/playlist/2f7JuKCQflqT3aZJjWDx4l?utm_source=generator",
   },
 };
 

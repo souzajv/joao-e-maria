@@ -14,6 +14,7 @@ import { StorySection } from "@/components/letter/StorySection";
 import { ProposalVideoInline } from "@/components/letter/ProposalVideoInline";
 import { MomentsGallery } from "@/components/letter/MomentsGallery";
 import { LetterClosing } from "@/components/letter/LetterClosing";
+import { LetterPlaylist } from "@/components/letter/LetterPlaylist";
 import { LetterFooterDecor } from "@/components/letter/LetterDecor";
 
 export default function HomePage() {
@@ -60,6 +61,10 @@ export default function HomePage() {
           <LetterDivider variant="light" />
 
           <LetterClosing closing={memorial.closing} />
+
+          <LetterDivider variant="light" />
+
+          <LetterPlaylist playlist={memorial.playlist} />
         </div>
 
         <LetterFooterDecor />
