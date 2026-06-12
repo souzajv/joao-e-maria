@@ -31,7 +31,7 @@ export function ProposalVideoInline({ video }: ProposalVideoInlineProps) {
 
         <div className="relative z-10 flex flex-1 flex-col items-center md:items-start">
           <SectionHeading
-            title="O momento em movimento"
+            title="A noite do pedido"
             icon="solar:videocamera-record-linear"
             align="start"
             showOrnament={false}

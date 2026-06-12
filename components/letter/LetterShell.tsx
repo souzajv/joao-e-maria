@@ -13,7 +13,7 @@ export function LetterShell({ children }: LetterShellProps) {
         <div className="pointer-events-none absolute inset-0 z-10 m-4 mt-4 border border-primary-light/20 sm:m-8" />
 
         <div
-          className="pointer-events-none absolute left-4 top-4 z-[15] -translate-x-[35%] -translate-y-[35%] sm:left-8 sm:top-8 sm:-translate-x-[40%] sm:-translate-y-[40%]"
+          className="pointer-events-none absolute left-4 top-4 z-[15] origin-top-left -translate-x-[14%] -translate-y-[14%] sm:left-8 sm:top-8 sm:-translate-x-[16%] sm:-translate-y-[16%]"
           aria-hidden
         >
           <Image

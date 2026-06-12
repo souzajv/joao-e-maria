@@ -9,7 +9,7 @@ export function TimelineSection({ milestones }: TimelineSectionProps) {
   return (
     <section>
       <SectionHeading
-        title="Nossa linha do tempo"
+        title="Nossa história"
         icon="solar:calendar-mark-linear"
         className="mb-10"
       />

@@ -1,12 +1,12 @@
 # COPY.md — João & Maria
 
-> Memorial estilo carta — PT-BR only.
+> Memorial pessoal — tom Escrita-para-Maria. PT-BR only.
 
 ## Tom de voz
 
-**Tom:** íntimo, carta escrita à mão, leve e romântico  
+**Tom:** íntimo, direto, apaixonado, conversacional  
 **Público:** Maria — historiadora e escritora  
-**Proposta:** nossa história em formato de convite/carta digital
+**Proposta:** nossa história real, sem clichê, sem travessões
 
 ---
 
@@ -14,30 +14,29 @@
 
 | Campo | Texto |
 |-------|-------|
-| Eyebrow | Ela disse sim |
+| Eyebrow | Pra você, Maria |
 | Nomes | João & Maria |
-| Data | 22 MAIO 2026 |
-| Subdata | O dia do nosso sim |
-| Dedicação | Este site é só seu. Cada foto aqui é um instante que eu guardo com carinho, do primeiro encontro até hoje. Obrigado por existir na minha vida. |
+| Data | 28 MARÇO 2026 |
+| Subdata | O dia em que tudo começou de verdade |
+| Dedicação | Fiz esse site só pra você. Cada foto aqui é um pedaço nosso... |
 | Counter | Juntos há... |
-
----
-
-## Capítulo VI — A viagem
-
-1. Longe de casa, mas exatamente onde eu queria estar: com você.
-2. Cada lugar novo ficou mais bonito porque você estava lá.
 
 ---
 
 ## Galeria
 
-**Título:** Nossos momentos  
-**Rodapé:** ...e ainda estamos escrevendo os próximos capítulos.
+**Título:** Nossa história em fotinhas  
+**Rodapé:** ...e a gente ainda tá escrevendo os próximos capítulos.
 
 ---
 
 ## Fechamento
 
-**Citação:** Você não é só minha namorada. É meu lugar favorito no mundo.  
-**Assinatura:** Com todo meu amor, para o Dia dos Namorados e para todos os dias.  
+**Quote:** Você não é só minha namorada. Você é o meu lugar favorito no mundo, Maria.  
+**Assinatura:** Com todo meu amor, pro Dia dos Namorados e pra todos os dias que vierem.
+
+---
+
+## Fonte de verdade
+
+Textos completos (legendas, stories, milestones): `content/memorial.ts`
