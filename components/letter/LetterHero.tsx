@@ -1,6 +1,6 @@
-import { Icon } from "@iconify/react";
 import type { MemorialContent } from "@/content/memorial";
 import { HeroVideoBlob } from "./HeroVideoBlob";
+import { LetterIcon } from "./LetterIcon";
 import { TogetherCounter } from "./TogetherCounter";
 
 type LetterHeroProps = {
@@ -41,14 +41,14 @@ export function LetterHero({ hero }: LetterHeroProps) {
         <div className="mx-auto max-w-2xl" data-letter-hero>
           <p className="text-center text-lg font-light italic leading-relaxed text-body">
             {hero.dedication}
-            <Icon
+            <LetterIcon
               icon="solar:heart-linear"
               className="ml-1 inline-block translate-y-1 text-xl text-gold"
             />
           </p>
         </div>
 
-        <TogetherCounter proposalDate={hero.proposalDate} />
+        <TogetherCounter sinceDate={hero.sinceDate} />
       </section>
     </>
   );

@@ -2,6 +2,7 @@ export type MemorialItem = {
   src: string;
   alt: string;
   caption: string;
+  kind?: "image" | "video";
 };
 
 export type MemorialChapter = {
@@ -35,7 +36,7 @@ export type MemorialContent = {
     dateLabel: string;
     dateSub: string;
     dedication: string;
-    proposalDate: string;
+    sinceDate: string;
     background: {
       mp4: string;
       gif: string;
@@ -56,7 +57,6 @@ export type MemorialContent = {
   closing: {
     quote: string;
     signature: string;
-    footer: string;
   };
 };
 
@@ -69,11 +69,11 @@ export const memorial: MemorialContent = {
   hero: {
     eyebrow: "Com muito amor...",
     names: { first: "João", second: "Maria" },
-    dateLabel: "22 MAIO 2026",
-    dateSub: "O dia do nosso sim",
+    dateLabel: "28 MARÇO 2026",
+    dateSub: "Nosso primeiro dia",
     dedication:
       "Este site é só seu. Cada foto aqui é um instante que eu guardo com carinho, do primeiro encontro até hoje. Obrigado por existir na minha vida.",
-    proposalDate: "2026-05-22T12:00:00-03:00",
+    sinceDate: "2026-03-28T12:00:00-03:00",
     background: {
       mp4: "/media/hero-pedido-loop.mp4",
       gif: "/media/hero-pedido-loop.gif",
@@ -88,10 +88,15 @@ export const memorial: MemorialContent = {
       subtitle: "Antes de saber que seria tudo",
       items: [
         {
-          src: "/media/capitulo-01-primeiro-encontro.jpg",
+          src: "/media/capitulo-01-primeiro-encontro.jpeg",
           alt: "Primeiro encontro",
           caption:
             "O dia em que te vi e o mundo ficou um pouco mais bonito.",
+        },
+        {
+          src: "/media/capitulo-01-segundo-encontro.jpg",
+          alt: "Segundo encontro",
+          caption: "Te ver de novo confirmou o que eu já sentia no primeiro olhar.",
         },
       ],
     },
@@ -109,8 +114,29 @@ export const memorial: MemorialContent = {
       ],
     },
     {
-      id: "proximidade",
+      id: "casa-maria",
       number: "III",
+      title: "A casa dela",
+      subtitle: "O dia em que conheci sua família e seus amigos",
+      items: [
+        {
+          src: "/media/casa-da-maria-01.mp4",
+          alt: "Resenha na casa da Maria",
+          caption:
+            "Resenha com seus amigos — e eu conhecendo o seu mundo.",
+          kind: "video",
+        },
+        {
+          src: "/media/casa-da-maria-02.jpeg",
+          alt: "Casa da Maria com a família",
+          caption:
+            "Seus pais, suas irmãs, e eu tentando parecer tranquilo.",
+        },
+      ],
+    },
+    {
+      id: "proximidade",
+      number: "IV",
       title: "Proximidade",
       subtitle: "Quando a distância entre nós sumiu",
       items: [
@@ -124,7 +150,7 @@ export const memorial: MemorialContent = {
     },
     {
       id: "pedido",
-      number: "IV",
+      number: "V",
       title: "O pedido",
       subtitle: "O dia em que perguntei se você queria ser minha",
       items: [
@@ -151,12 +177,12 @@ export const memorial: MemorialContent = {
           caption: "E então eu perguntei.",
         },
         {
-          src: "/media/capitulo-04-pedido-05.jpg",
+          src: "/media/capitulo-04-pedido-05.jpeg",
           alt: "Pedido de namoro, momento 5",
           caption: "Seu sim foi a resposta mais bonita que já ouvi.",
         },
         {
-          src: "/media/capitulo-04-pedido-06.jpg",
+          src: "/media/capitulo-04-pedido-06.jpeg",
           alt: "Pedido de namoro, momento 6",
           caption:
             "Um instante que eu revisito no pensamento todo dia.",
@@ -167,6 +193,16 @@ export const memorial: MemorialContent = {
           caption:
             "Oficialmente nós. E eu nunca me senti tão completo.",
         },
+        {
+          src: "/media/capitulo-04-pedido-08.jpg",
+          alt: "Pedido de namoro, momento 8",
+          caption: "Um sorriso que eu guardo no bolso do coração.",
+        },
+        {
+          src: "/media/capitulo-04-pedido-09.jpg",
+          alt: "Pedido de namoro, momento 9",
+          caption: "O depois do sim — e tudo que ainda viria.",
+        },
       ],
       video: {
         src: "/media/video-pedido-namoro.mp4",
@@ -176,10 +212,15 @@ export const memorial: MemorialContent = {
     },
     {
       id: "nos-dois",
-      number: "V",
+      number: "VI",
       title: "Nós dois",
       subtitle: "Casa do Peretto e tudo que construímos",
       items: [
+        {
+          src: "/media/capitulo-05-peretto-antes-da-casa-dele.jpeg",
+          alt: "Antes de entrar na casa dele",
+          caption: "Aquele instante antes de cruzar a porta — e saber que era casa.",
+        },
         {
           src: "/media/capitulo-05-peretto-01.jpg",
           alt: "Casa do Peretto, foto 1",
@@ -236,7 +277,7 @@ export const memorial: MemorialContent = {
           caption: "A gente rindo de coisa boba, como sempre.",
         },
         {
-          src: "/media/capitulo-05-peretto-12.jpg",
+          src: "/media/capitulo-05-peretto-12.jpeg",
           alt: "Casa do Peretto, foto 12",
           caption: "Mais um dia que eu quero guardar para sempre.",
         },
@@ -260,11 +301,16 @@ export const memorial: MemorialContent = {
           alt: "Casa do Peretto, foto 16",
           caption: "E ainda estamos só começando.",
         },
+        {
+          src: "/media/capitulo-05-peretto-17.jpg",
+          alt: "Casa do Peretto, foto 17",
+          caption: "Mais um pedaço da nossa história, colado no álbum.",
+        },
       ],
     },
     {
       id: "viagem",
-      number: "VI",
+      number: "VII",
       title: "A viagem",
       subtitle: "A última vez que estivemos juntos",
       items: [
@@ -279,6 +325,39 @@ export const memorial: MemorialContent = {
           alt: "Viagem juntos, momento 2",
           caption:
             "Cada lugar novo ficou mais bonito porque você estava lá.",
+        },
+      ],
+    },
+    {
+      id: "memes",
+      number: "VIII",
+      title: "Us",
+      subtitle: "Os memes e gatinhos que a gente manda",
+      items: [
+        {
+          src: "/media/memes/meme-01.jpeg",
+          alt: "Meme Us 1",
+          caption: "A gente em meme de gatinho — porque é assim que nos vemos.",
+        },
+        {
+          src: "/media/memes/meme-02.jpeg",
+          alt: "Meme Us 2",
+          caption: "Mandado no Instagram, guardado no coração.",
+        },
+        {
+          src: "/media/memes/meme-03.jpeg",
+          alt: "Meme Us 3",
+          caption: "Nossa personalidade de casal em um quadrinho só.",
+        },
+        {
+          src: "/media/memes/meme-04.jpeg",
+          alt: "Meme Us 4",
+          caption: "O tipo de coisa que só faz sentido entre nós dois.",
+        },
+        {
+          src: "/media/memes/meme-05.jpeg",
+          alt: "Meme Us 5",
+          caption: "Us — porque ninguém traduz melhor quem a gente é junto.",
         },
       ],
     },
@@ -316,7 +395,8 @@ export const memorial: MemorialContent = {
     {
       number: "01",
       title: "O encontro",
-      description: "O dia em que nos vimos pela primeira vez.",
+      description:
+        "28 de março de 2026. O dia em que nos vimos pela primeira vez.",
     },
     {
       number: "02",
@@ -325,21 +405,26 @@ export const memorial: MemorialContent = {
     },
     {
       number: "03",
+      title: "A casa dela",
+      description: "Conheci sua família, suas irmãs e seus amigos.",
+    },
+    {
+      number: "04",
       title: "Primeira noite",
       description: "Dormimos juntos. E tudo mudou.",
     },
     {
-      number: "04",
+      number: "05",
       title: "O pedido",
       description: "22 de maio de 2026. Você disse sim.",
     },
     {
-      number: "05",
+      number: "06",
       title: "Nós",
       description: "Cada dia desde então.",
     },
     {
-      number: "06",
+      number: "07",
       title: "A viagem",
       description: "Nossa última aventura juntos.",
     },
@@ -353,7 +438,6 @@ export const memorial: MemorialContent = {
       "Você não é só minha namorada. É meu lugar favorito no mundo.",
     signature:
       "Com todo meu amor, para o Dia dos Namorados e para todos os dias.",
-    footer: "João & Maria · 2026",
   },
 };
 

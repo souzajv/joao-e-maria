@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 type TogetherCounterProps = {
-  proposalDate: string;
+  sinceDate: string;
 };
 
 type TimeTogether = {
@@ -13,8 +13,15 @@ type TimeTogether = {
   seconds: number;
 };
 
-function calcTimeTogether(proposalDate: string): TimeTogether {
-  const start = new Date(proposalDate).getTime();
+const EMPTY_TIME: TimeTogether = {
+  days: 0,
+  hours: 0,
+  minutes: 0,
+  seconds: 0,
+};
+
+function calcTimeTogether(sinceDate: string): TimeTogether {
+  const start = new Date(sinceDate).getTime();
   const now = Date.now();
   const diff = Math.max(0, now - start);
 
@@ -26,17 +33,15 @@ function calcTimeTogether(proposalDate: string): TimeTogether {
   return { days, hours, minutes, seconds };
 }
 
-export function TogetherCounter({ proposalDate }: TogetherCounterProps) {
-  const [time, setTime] = useState<TimeTogether>(() =>
-    calcTimeTogether(proposalDate)
-  );
+export function TogetherCounter({ sinceDate }: TogetherCounterProps) {
+  const [time, setTime] = useState<TimeTogether>(EMPTY_TIME);
 
   useEffect(() => {
-    const tick = () => setTime(calcTimeTogether(proposalDate));
+    const tick = () => setTime(calcTimeTogether(sinceDate));
     tick();
     const id = setInterval(tick, 1000);
     return () => clearInterval(id);
-  }, [proposalDate]);
+  }, [sinceDate]);
 
   const pad = (n: number) => n.toString().padStart(2, "0");
 

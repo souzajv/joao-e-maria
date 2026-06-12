@@ -26,6 +26,17 @@ body {
   color: var(--color-primary-dark);
 }
 
+@layer components {
+  /* Solar linear — traço fino consistente em todos os ícones */
+  .letter-icon svg {
+    stroke-width: 1;
+  }
+
+  .letter-icon svg [stroke] {
+    stroke-width: 1;
+  }
+}
+
 @layer utilities {
   .font-display {
     font-family: var(--font-display), Georgia, serif;

@@ -40,28 +40,41 @@ export function MomentsGallery({ title, footer, chapters }: MomentsGalleryProps)
             />
 
             <div className="grid grid-cols-1 gap-y-14 gap-x-8 overflow-visible sm:grid-cols-2 sm:gap-x-10">
-              {chapter.items.map((photo) => {
+              {chapter.items.map((item) => {
                 const index = photoIndex++;
                 const offset = index % 2 === 1;
+                const isVideo = item.kind === "video";
 
                 return (
                   <div
-                    key={photo.src}
+                    key={item.src}
                     className={`overflow-visible px-5 py-3 sm:px-7 sm:py-4 ${offset ? "sm:mt-14" : "sm:mt-0"}`}
                   >
                     <PolaroidFrame
-                      caption={photo.caption}
+                      caption={item.caption}
                       tilt={tiltForIndex(index)}
                       backdropIndex={index}
+                      mediaClassName={isVideo ? "aspect-[9/16]" : "aspect-[4/5]"}
                     >
-                      <Image
-                        src={photo.src}
-                        alt={photo.alt}
-                        fill
-                        sizes="(max-width: 640px) 100vw, 320px"
-                        className="object-cover transition-transform duration-700 hover:scale-105"
-                        priority={index < 2}
-                      />
+                      {isVideo ? (
+                        <video
+                          controls
+                          playsInline
+                          preload="metadata"
+                          className="h-full w-full object-cover"
+                        >
+                          <source src={item.src} type="video/mp4" />
+                        </video>
+                      ) : (
+                        <Image
+                          src={item.src}
+                          alt={item.alt}
+                          fill
+                          sizes="(max-width: 640px) 100vw, 320px"
+                          className="object-cover transition-transform duration-700 hover:scale-105"
+                          priority={index < 2}
+                        />
+                      )}
                     </PolaroidFrame>
                   </div>
                 );

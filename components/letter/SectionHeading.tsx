@@ -1,5 +1,5 @@
-import { Icon } from "@iconify/react";
 import { ElegantOrnament } from "./ElegantOrnament";
+import { LetterIcon } from "./LetterIcon";
 
 type SectionHeadingProps = {
   title: string;
@@ -37,7 +37,7 @@ export function SectionHeading({
       className={`flex flex-col ${alignClass} ${className}`.trim()}
     >
       {icon && (
-        <Icon icon={icon} className="mb-4 text-4xl text-primary" />
+        <LetterIcon icon={icon} className="mb-4 text-4xl text-primary" />
       )}
       {eyebrow && (
         <span className="mb-1 block text-xs uppercase tracking-[0.25em] text-primary-light">

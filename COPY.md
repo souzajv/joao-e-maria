@@ -41,4 +41,3 @@
 
 **Citação:** Você não é só minha namorada. É meu lugar favorito no mundo.  
 **Assinatura:** Com todo meu amor, para o Dia dos Namorados e para todos os dias.  
-**Footer:** João & Maria · 2026
