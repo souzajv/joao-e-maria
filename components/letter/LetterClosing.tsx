@@ -21,10 +21,6 @@ export function LetterClosing({ closing }: LetterClosingProps) {
       <p className="mx-auto max-w-xl text-lg font-light italic text-body">
         {closing.signature}
       </p>
-
-      <p className="mt-10 text-xs uppercase tracking-[0.2em] text-slate-400">
-        {closing.footer}
-      </p>
     </section>
   );
 }

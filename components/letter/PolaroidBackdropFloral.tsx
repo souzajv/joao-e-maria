@@ -7,12 +7,16 @@ type PolaroidBackdropFloralProps = {
 
 type FloralCorner = "bottom-right" | "top-left" | "bottom-left" | "top-right";
 
-/** Classes estáticas — Tailwind JIT precisa vê-las neste arquivo */
+/** +20% vs offsets anteriores — pétalas vazam mais do canto da polaroid */
 const CORNER_CLASS: Record<FloralCorner, string> = {
-  "bottom-right": "absolute z-0 -bottom-8 -right-12 sm:-bottom-10 sm:-right-14",
-  "top-left": "absolute z-0 -top-6 -left-12 sm:-top-8 sm:-left-14",
-  "bottom-left": "absolute z-0 -bottom-8 -left-12 sm:-bottom-10 sm:-left-14",
-  "top-right": "absolute z-0 -top-6 -right-12 sm:-top-8 sm:-right-14",
+  "bottom-right":
+    "absolute z-0 -bottom-[2.4rem] -right-[3.6rem] sm:-bottom-12 sm:-right-[4.2rem]",
+  "top-left":
+    "absolute z-0 -top-[1.8rem] -left-[3.6rem] sm:-top-10 sm:-left-[4.2rem]",
+  "bottom-left":
+    "absolute z-0 -bottom-[2.4rem] -left-[3.6rem] sm:-bottom-12 sm:-left-[4.2rem]",
+  "top-right":
+    "absolute z-0 -top-[1.8rem] -right-[3.6rem] sm:-top-10 sm:-right-[4.2rem]",
 };
 
 export function PolaroidBackdropFloral({ photoIndex }: PolaroidBackdropFloralProps) {
