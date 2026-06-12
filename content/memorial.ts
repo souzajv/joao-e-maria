@@ -75,7 +75,7 @@ export const memorial: MemorialContent = {
     eyebrow: "Pra você, Maria",
     names: { first: "João", second: "Maria" },
     dateLabel: "28 MARÇO 2026",
-    dateSub: "O dia em que tudo começou de verdade",
+    dateSub: "O dia em que tudo começou",
     dedication:
       "Fiz esse site só pra você. Cada foto aqui é um pedaço nosso, do dia em que te vi até hoje. Eu te amo de um jeito que não cabe em mensagem. Obrigado por existir na minha vida.",
     sinceDate: "2026-03-28T12:00:00-03:00",
